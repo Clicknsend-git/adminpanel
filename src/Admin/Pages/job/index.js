@@ -81,7 +81,7 @@ const Contant = () => {
   const [pageData, setPageData] = React.useState({});
   let tablehead = ["S/N", "Job Name", "Vehicle Name", "Action"];
   const [search, setSearch] = useState("");
-  const [value, setValue] = React.useState("admin");
+  const [value, setValue] = React.useState("customer");
 
   const handlePageChange = (event, value) => {
     setPage(value);
@@ -231,7 +231,7 @@ const Contant = () => {
                   onChange={handleJobChange}
                   aria-label="basic tabs example"
                 >
-                  <Tab label="Admin" value="admin" />
+                  {/* <Tab label="Admin" value="admin" /> */}
                   <Tab label="Customer" value="customer" />
                   <Tab label="Company" value="company" />
                 </Tabs>

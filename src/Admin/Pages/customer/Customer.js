@@ -103,20 +103,19 @@ const Contant = () => {
   const handleClose = () => {
     setOpen(false);
   };
-  
 
   const updateStatus = async (id, status) => {
-    console.log("error---->", id,status);
-    const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+    console.log("error---->", id, status);
+    const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
     setsnackdata({
       open: false,
       message: "",
       status: "success",
     });
-  
+
     let apiEndpoint = "";
     let statusType = "";
-  
+
     if (!status) {
       apiEndpoint = `api/auth/master/verify-user/${id}`;
       statusType = "success";
@@ -130,7 +129,7 @@ const Contant = () => {
       console.error("Invalid status");
       return;
     }
-  
+
     try {
       const response = await apiAdminConfig.get(apiEndpoint);
       if (response && response?.status === 200) {
@@ -147,16 +146,14 @@ const Contant = () => {
     }
   };
 
-   
-
   //handle Delete function
   const handleDelete = async (id) => {
-    setOpen(id); 
+    setOpen(id);
   };
 
   // Get current Posts
   const indexOfLastPost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage ;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
 
   const currentPost = posts;
 
@@ -355,7 +352,7 @@ const Contant = () => {
                               >
                                 {el?.mobile || "N/A"}
                               </td>
-                             
+
                               <td
                                 style={{
                                   fontSize: "14px",
@@ -399,58 +396,61 @@ const Contant = () => {
                                                 )
                                               }
                                               style={
-    el?.status === 0
-      ? {
-          // red
-          backgroundColor: "red",
-          opacity: "0.7",
-          color: "#fff",
-          borderColor: "#dc3545",
-          width: "10vh",
-          fontSize: "12px",
-          lineHeight: "1.5",
-          borderRadius: ".2rem",
-          padding: ".375rem .75rem",
-        }
-      : el?.status === 1
-      ? {
-          // green
-          backgroundColor: "rgb(12 168 48)",
-          opacity: "0.7",
-          color: "#fff",
-          borderColor: "#28a745",
-          width: "10vh",
-          fontSize: "12px",
-          lineHeight: "1.5",
-          borderRadius: ".2rem",
-          padding: ".375rem .75rem",
-        }
-      : el?.status === 2
-      ? {
-          // pink
-          backgroundColor: "#6c757d",
-          opacity: "0.7",
-          color: "#fff",
-          borderColor: "#ff69b4",
-          width: "10vh",
-          fontSize: "12px",
-          lineHeight: "1.5",
-          borderRadius: ".2rem",
-          padding: ".375rem .75rem",
-        }
-      : {
-          // default grey
-          backgroundColor: "#6c757d",
-          opacity: "0.7",
-          color: "#fff",
-          borderColor: "#6c757d",
-          width: "10vh",
-          fontSize: "12px",
-          lineHeight: "1.5",
-          borderRadius: ".2rem",
-          padding: ".375rem .75rem",
-        }
-  }
+                                                el?.status === 0
+                                                  ? {
+                                                      // red
+                                                      backgroundColor: "red",
+                                                      opacity: "0.7",
+                                                      color: "#fff",
+                                                      borderColor: "#dc3545",
+                                                      width: "10vh",
+                                                      fontSize: "12px",
+                                                      lineHeight: "1.5",
+                                                      borderRadius: ".2rem",
+                                                      padding: ".375rem .75rem",
+                                                    }
+                                                  : el?.status === 1
+                                                  ? {
+                                                      // green
+                                                      backgroundColor:
+                                                        "rgb(12 168 48)",
+                                                      opacity: "0.7",
+                                                      color: "#fff",
+                                                      borderColor: "#28a745",
+                                                      width: "10vh",
+                                                      fontSize: "12px",
+                                                      lineHeight: "1.5",
+                                                      borderRadius: ".2rem",
+                                                      padding: ".375rem .75rem",
+                                                    }
+                                                  : el?.status === 2
+                                                  ? {
+                                                      // pink
+                                                      backgroundColor:
+                                                        "#6c757d",
+                                                      opacity: "0.7",
+                                                      color: "#fff",
+                                                      borderColor: "#ff69b4",
+                                                      width: "10vh",
+                                                      fontSize: "12px",
+                                                      lineHeight: "1.5",
+                                                      borderRadius: ".2rem",
+                                                      padding: ".375rem .75rem",
+                                                    }
+                                                  : {
+                                                      // default grey
+                                                      backgroundColor:
+                                                        "#6c757d",
+                                                      opacity: "0.7",
+                                                      color: "#fff",
+                                                      borderColor: "#6c757d",
+                                                      width: "10vh",
+                                                      fontSize: "12px",
+                                                      lineHeight: "1.5",
+                                                      borderRadius: ".2rem",
+                                                      padding: ".375rem .75rem",
+                                                    }
+                                              }
                                             >
                                               {el?.status === 0
                                                 ? "Verify"

@@ -99,17 +99,28 @@ const Contant = () => {
   const fetchdata = async (value) => {
     setLoading(true);
     await apiAdminConfig
-      .get("api/auth/master/company/search", {
+
+          
+          
+    // api/auth/master/company/search?type=customer&search=&per_page=10&page=1
+
+      .get("api/auth/master/company/search?type=customer&search=&per_page=10&page=1", {
         params: {
           search: value,
           per_page: pageSize,
           page: page,
+       
+
+          // user_type: "company",   
+          // company_type: "driver", 
         },
       })
       .then((response) => {
         if (response.status === 200) {
           setPageCount(response?.data?.view_data?.last_page);
+          
           setPageSize(response?.data?.view_data?.per_page);
+
           setPageData(response?.data?.view_data);
 
           setPosts(response?.data?.view_data?.data);
@@ -120,6 +131,36 @@ const Contant = () => {
         console.log("error", error);
       });
   };
+
+
+  // const fetchdata = async (value) => {
+  //   setLoading(true);
+  //   await apiAdminConfig
+  //     .get("api/auth/master/company/search", {
+  //       params: {
+  //         search: value,
+  //         per_page: pageSize,
+  //         page: page,
+  //         user_type: "company",   
+  //         company_type: "driver", 
+  //       },
+  //     })
+  //     .then((response) => {
+  //       if (response.status === 200) {
+  //         setPageCount(response?.data?.view_data?.last_page);
+  //         setPageSize(response?.data?.view_data?.per_page);
+  //         setPageData(response?.data?.view_data);
+  
+  //         setPosts(response?.data?.view_data?.data);
+  //         setLoading(false);
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       console.log("error", error);
+  //       setLoading(false);
+  //     });
+  // };
+  
 
   React.useEffect(() => {
     fetchdata();
@@ -162,7 +203,7 @@ const Contant = () => {
       const response = await apiAdminConfig.get(apiEndpoint);
       if (response && response?.status === 200) {
         fetchdata();
-        await wait(1000); // Assuming you have a wait function
+        await wait(1000); 
         setsnackdata({
           open: true,
           message: response.data.message,
@@ -254,7 +295,7 @@ const Contant = () => {
                     component="h3"
                     sx={{ fontSize: "30px", fontWeight: 500 }}
                   >
-                    Companies
+                    Companies1
                   </Typography>
                 </Box>
                 <Box>

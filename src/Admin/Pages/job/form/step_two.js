@@ -605,7 +605,7 @@ const StepTwo = ({ formik, id, addProduct, removeProduct }) => {
                               boxShadow: "none",
                             }}
                           >
-                            <Grid container spacing={0}>
+                            {/* <Grid container spacing={0}>
                               <Grid item md={12}>
                                 <Stack
                                   direction="row"
@@ -680,7 +680,8 @@ const StepTwo = ({ formik, id, addProduct, removeProduct }) => {
                                   }
                                 />
                               </Grid>
-                            </Grid>
+                            </Grid> */}
+                            
                           </Card>
                         </Box>
                       ))}

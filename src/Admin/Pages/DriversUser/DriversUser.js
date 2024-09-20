@@ -98,7 +98,7 @@ const Contant = () => {
   const fetchdata = async (value) => {
     setLoading(true);
     await apiAdminConfig
-      .get("api/auth/master/company/search", {
+      .get("api/auth/master/company/search?type=driver&search=&per_page=10&page=1", {
         params: {
           search: value,
           per_page: pageSize,

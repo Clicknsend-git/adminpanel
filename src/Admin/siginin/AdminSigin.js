@@ -17,8 +17,8 @@ function Login() {
   const { login } = useAuthContext();
   const formik = useFormik({
     initialValues: {
-      email: "superadmin@mailinator.com",
-      password: "Qwer!234",
+      email: process.env.REACT_APP_DEFAULT_EMAIL || "",
+      password: process.env.REACT_APP_DEFAULT_PASSWORD || "",
     },
     validate: (values) => {
       const errors = {};
