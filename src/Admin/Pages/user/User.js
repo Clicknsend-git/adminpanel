@@ -76,6 +76,7 @@ const Contant = () => {
 
   let tablehead = [
     "S/N",
+    "Id",
     "Company Name",
     "Email",
     "Contact No.",
@@ -295,7 +296,7 @@ const Contant = () => {
                     component="h3"
                     sx={{ fontSize: "30px", fontWeight: 500 }}
                   >
-                    Companies1
+                    Companies
                   </Typography>
                 </Box>
                 <Box>
@@ -419,6 +420,19 @@ const Contant = () => {
                               >
                                 {id + 1}
                               </td>
+
+                              {/* add customer company id */}
+                              
+                              <td
+                                style={{
+                                  fontSize: "14px",
+                                  textAlign: "center",
+                                  verticalAlign: "middle",
+                                }}
+                              >
+                                CUSC{el.id || "N/A"}
+                              </td>
+
                               <td
                                 style={{
                                   fontSize: "14px",

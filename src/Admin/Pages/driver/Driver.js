@@ -53,6 +53,7 @@ const Contant = () => {
   const [pageData, setPageData] = React.useState({});
   let tablehead = [
     "S/N",
+    "Id",
     "Driver Name",
     "Email",
     "Contact No.",
@@ -327,7 +328,23 @@ const Contant = () => {
                                   }}
                                 >
                                   {id + 1}
+                                
+                              </td>
+                             {/* add Driver Id */}
+                              <td
+                                  style={{
+                                    fontSize: "14px",
+                                    textAlign: "center",
+                                    verticalAlign: "middle",
+                                    cursor: "pointer",
+                                  }}
+                                  onClick={() => {
+                                    navigate(`/master/driver/history/${el.id}`);
+                                  }}
+                                >
+                                  DRI{el.id || "N/A"}
                                 </td>
+
                                 <td
                                   style={{
                                     fontSize: "14px",

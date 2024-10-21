@@ -50,6 +50,7 @@ const Contant = () => {
 
   let tablehead = [
     "S/N",
+    "Id",
     "Customer Name",
     "Email",
     "Contact No.",
@@ -325,6 +326,17 @@ const Contant = () => {
                               >
                                 {id + 1}
                               </td>
+                              {/* add custimer Id */}
+                              <td
+                                style={{
+                                  fontSize: "14px",
+                                  textAlign: "center",
+                                  verticalAlign: "middle",
+                                }}
+                              >
+                                CUS{el.id || "N/A"}
+                              </td>
+
                               <td
                                 style={{
                                   fontSize: "14px",

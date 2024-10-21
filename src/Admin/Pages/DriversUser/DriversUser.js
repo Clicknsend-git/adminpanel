@@ -76,6 +76,7 @@ const Contant = () => {
 
   let tablehead = [
     "S/N",
+    "Id",
     "Company Name",
     "Email",
     "Contact No.",
@@ -378,6 +379,20 @@ const Contant = () => {
                               >
                                 {id + 1}
                               </td>
+
+                              {/* add Driver company id */}
+
+                              <td
+                                style={{
+                                  fontSize: "14px",
+                                  textAlign: "center",
+                                  verticalAlign: "middle",
+                                }}
+                              >
+                                DRIC{el.id || "N/A"}
+                              </td>
+
+
                               <td
                                 style={{
                                   fontSize: "14px",
