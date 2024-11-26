@@ -89,7 +89,7 @@ const Contant = () => {
           {<CustomSnackbar value={snackData} />}
           <Row className="mt-4">
             <Col md={6} style={{ textAlign: "left" }}>
-              <h3 style={{ height: "40px" }}>Driver Details</h3>
+              <h3 style={{ height: "40px" }}>Driver Detailsqq</h3>
             </Col>
             <Col md={4}></Col>
             <Col md={2} style={{ textAlign: "left" }}>
@@ -157,7 +157,7 @@ const Contant = () => {
                                 {posts?.address || "N/A"}
                               </div>
                             </div>
-                           
+
                             <div className="details-row">
                               <div className="details-label">City:</div>
                               <div className="details-value">
@@ -184,6 +184,32 @@ const Contant = () => {
                                 {posts?.license_expiry || "N/A"}
                               </div>
                             </div>
+                            {/* add Vehicle details */}
+
+                            <div className="details-row">
+                              <div className="details-label">
+                                vehicle_number:
+                              </div>
+                              <div className="details-value">
+                                {posts?.vehicle_number || "N/A"}
+                              </div>
+                            </div>
+
+                            <div className="details-row">
+                              <div className="details-label">vehicle_type:</div>
+                              <div className="details-value">
+                                {posts?.vehicle_type || "N/A"}
+                              </div>
+                            </div>
+
+                            <div className="details-row">
+                              <div className="details-label">vehicle_body:</div>
+                              <div className="details-value">
+                                {posts?.vehicle_body || "N/A"}
+                              </div>
+                            </div>
+                            {/* add Vehicle details end */}
+
 
                             <div className="details-row">
                               <div className="details-label">Job status:</div>
@@ -307,7 +333,10 @@ const Contant = () => {
                   </Box>
                 </Grid>
                 <Grid item sm={4}>
-                  <Box className="details-label"> Public Liability Certificate</Box>
+                  <Box className="details-label">
+                    {" "}
+                    Public Liability Certificate
+                  </Box>
                   <Box className="details-value">
                     <Image
                       width="150"
