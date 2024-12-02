@@ -54,7 +54,7 @@ const Contant = () => {
     "Customer Name",
     "Email",
     "Contact No.",
-    "City",
+    "Address",
     "Action",
   ];
   const [search, setSearch] = useState("");
@@ -201,7 +201,7 @@ const Contant = () => {
                     component="h3"
                     sx={{ fontSize: "30px", fontWeight: 500 }}
                   >
-                    Customers
+                    Customers 1
                   </Typography>
                 </Box>
                 <Box>
@@ -372,7 +372,7 @@ const Contant = () => {
                                   verticalAlign: "middle",
                                 }}
                               >
-                                {el?.city || "N/A"}
+                                {el?.address || "N/A"}
                               </td>
 
                               {/* <td style={{ width: "20vh" }}>

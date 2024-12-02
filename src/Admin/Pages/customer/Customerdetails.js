@@ -109,7 +109,7 @@ const Contant = () => {
           {<CustomSnackbar value={snackData} />}
           <Row className="mt-4">
             <Col md={6} style={{ textAlign: "left" }}>
-              <h3 style={{ height: "40px" }}>Customer Details</h3>
+              <h3 style={{ height: "40px" }}>Customer Details 1</h3>
             </Col>
             <Col md={4}></Col>
             <Col md={2} style={{ textAlign: "left" }}>
@@ -195,7 +195,7 @@ const Contant = () => {
                               </Card.Title>
                               <Card.Text>{posts?.address || "N/A"}</Card.Text>
                             </Stack>
-                            <Stack direction="horizontal" gap={2}>
+                            {/* <Stack direction="horizontal" gap={2}>
                               <Card.Title
                                 style={{
                                   fontSize: "18px",
@@ -216,7 +216,7 @@ const Contant = () => {
                                 Pincode :
                               </Card.Title>
                               <Card.Text> {posts?.zip_code || "N/A"}</Card.Text>
-                            </Stack>
+                            </Stack> */}
                             <Stack direction="horizontal" gap={2}>
                               <Card.Title
                                 style={{
