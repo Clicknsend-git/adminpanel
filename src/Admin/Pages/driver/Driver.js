@@ -57,7 +57,7 @@ const Contant = () => {
     "Driver Name",
     "Email",
     "Contact No.",
-    "Register Type",
+    // "Register Type1",
     "Total Jobs",
     "Total Earning",
     "Job Status",
@@ -376,7 +376,7 @@ const Contant = () => {
                                 >
                                   {el?.mobile || "N/A"}
                                 </td>
-                                <td
+                                {/* <td
                                   style={{
                                     fontSize: "14px",
                                     textAlign: "center",
@@ -384,7 +384,7 @@ const Contant = () => {
                                   }}
                                 >
                                   {el?.register_type || "N/A"}
-                                </td>
+                                </td> */}
                                 <td
                                   style={{
                                     fontSize: "14px",
