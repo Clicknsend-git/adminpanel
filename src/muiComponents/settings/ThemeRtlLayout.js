@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { useEffect } from 'react';
+import { useTheme } from '@mui/material/styles';
 // rtl
 import { prefixer } from 'stylis';
 import rtlPlugin from 'stylis-plugin-rtl';
@@ -7,7 +8,6 @@ import rtlPlugin from 'stylis-plugin-rtl';
 import createCache from '@emotion/cache';
 import { CacheProvider } from '@emotion/react';
 // @mui
-import { useTheme } from '@mui/material/styles';
 
 // ----------------------------------------------------------------------
 

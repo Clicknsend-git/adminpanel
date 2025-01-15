@@ -302,7 +302,7 @@ const Contant = () => {
           <Card>
             <CardContent>
               <Grid container>
-                <Grid item sm={4}>
+                {/* <Grid item sm={4}>
                   <Box className="details-label">Company Logo</Box>
                   <Box className="details-value">
                     <Image
@@ -313,7 +313,7 @@ const Contant = () => {
                       alt="staffimage.png"
                     />
                   </Box>
-                </Grid>
+                </Grid> */}
                 <Grid item sm={4}>
                   <Box className="details-label">Company Certificate</Box>
                   <Box className="details-value">

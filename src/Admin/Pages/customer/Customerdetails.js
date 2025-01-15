@@ -109,7 +109,7 @@ const Contant = () => {
           {<CustomSnackbar value={snackData} />}
           <Row className="mt-4">
             <Col md={6} style={{ textAlign: "left" }}>
-              <h3 style={{ height: "40px" }}>Customer Details 1</h3>
+              <h3 style={{ height: "40px" }}>Customer Details</h3>
             </Col>
             <Col md={4}></Col>
             <Col md={2} style={{ textAlign: "left" }}>
@@ -135,7 +135,7 @@ const Contant = () => {
                   <Col sm={12} md={12}>
                     <div className="staffdetails-card">
                       <Row>
-                        <Col md={4}>
+                        {/* <Col md={4}>
                           <Card
                             border="none"
                             style={{ border: "none", marginBottom: 5 }}
@@ -148,7 +148,7 @@ const Contant = () => {
                               alt="staffimage.png"
                             />
                           </Card>
-                        </Col>
+                        </Col> */}
                         <Col md={8}>
                           <Stack gap={2}>
                             <Stack direction="horizontal" gap={2}>

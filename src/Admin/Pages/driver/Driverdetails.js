@@ -26,6 +26,10 @@ const Contant = () => {
     status: "",
   });
 
+
+  const base_urll = "https:\/\/evsexpres.com\/public\/assets\/images\/"
+
+
   // ============= Get Doctor Data ==============
   const fetchdata = async (id) => {
     setLoader(true);
@@ -89,7 +93,7 @@ const Contant = () => {
           {<CustomSnackbar value={snackData} />}
           <Row className="mt-4">
             <Col md={6} style={{ textAlign: "left" }}>
-              <h3 style={{ height: "40px" }}>Driver Detailsqq</h3>
+              <h3 style={{ height: "40px" }}>Driver Details</h3>
             </Col>
             <Col md={4}></Col>
             <Col md={2} style={{ textAlign: "left" }}>
@@ -115,7 +119,7 @@ const Contant = () => {
                   <Col sm={12} md={12}>
                     <div className="staffdetails-card">
                       <Row>
-                        <Col md={4}>
+                        {/* <Col md={4}>
                           <Card
                             border="none"
                             style={{ border: "none", marginBottom: 5 }}
@@ -128,7 +132,7 @@ const Contant = () => {
                               alt="staffimage.png"
                             />
                           </Card>
-                        </Col>
+                        </Col> */}
                         <Col md={8}>
                           <div className="details-container">
                             <div className="details-row">
@@ -170,30 +174,30 @@ const Contant = () => {
                                 {posts?.zip_code || "N/A"}
                               </div>
                             </div>
-                            <div className="details-row">
+                            {/* <div className="details-row">
                               <div className="details-label">Licence Date:</div>
                               <div className="details-value">
                                 {posts?.license_expiry || "N/A"}
                               </div>
-                            </div>
-                            <div className="details-row">
+                            </div> */}
+                            {/* <div className="details-row">
                               <div className="details-label">
                                 Registration On:
                               </div>
                               <div className="details-value">
                                 {posts?.license_expiry || "N/A"}
                               </div>
-                            </div>
+                            </div> */}
                             {/* add Vehicle details */}
 
-                            <div className="details-row">
+                            {/* <div className="details-row">
                               <div className="details-label">
                                 vehicle_number:
                               </div>
                               <div className="details-value">
                                 {posts?.vehicle_number || "N/A"}
                               </div>
-                            </div>
+                            </div> */}
 
                             <div className="details-row">
                               <div className="details-label">vehicle_type:</div>
@@ -267,7 +271,7 @@ const Contant = () => {
                       width="150"
                       height="150"
                       roundedCircle
-                      src={`${posts?.base_url}${posts?.profile_img}`}
+                      src={`${base_urll}${posts?.dvia_cert}`}
                       alt="staffimage.png"
                     />
                   </Box>
@@ -279,7 +283,7 @@ const Contant = () => {
                       width="150"
                       height="150"
                       roundedCircle
-                      src={`${posts?.base_url}${posts?.licence_front}`}
+                      src={`${base_urll}${posts?.licence_front}`}
                       alt="staffimage.png"
                     />
                   </Box>
@@ -291,7 +295,7 @@ const Contant = () => {
                       width="150"
                       height="150"
                       roundedCircle
-                      src={`${posts?.base_url}${posts?.licence_back}`}
+                      src={`${base_urll}${posts?.licence_back}`}
                       alt="staffimage.png"
                     />
                   </Box>
@@ -303,7 +307,7 @@ const Contant = () => {
                       width="150"
                       height="150"
                       roundedCircle
-                      src={`${posts?.base_url}${posts?.address_proof}`}
+                      src={`${base_urll}${posts?.address_proof}`}
                       alt="staffimage.png"
                     />
                   </Box>
@@ -315,7 +319,7 @@ const Contant = () => {
                       width="150"
                       height="150"
                       roundedCircle
-                      src={`${posts?.base_url}${posts?.insurance_cert}`}
+                      src={`${base_urll}${posts?.insurance_cert}`}
                       alt="staffimage.png"
                     />
                   </Box>
@@ -327,7 +331,7 @@ const Contant = () => {
                       width="150"
                       height="150"
                       roundedCircle
-                      src={`${posts?.base_url}${posts?.transit_cert}`}
+                      src={`${base_urll}${posts?.transit_cert}`}
                       alt="staffimage.png"
                     />
                   </Box>
@@ -342,7 +346,7 @@ const Contant = () => {
                       width="150"
                       height="150"
                       roundedCircle
-                      src={`${posts?.base_url}${posts?.liability_cert}`}
+                      src={`${base_urll}${posts?.liability_cert}`}
                       alt="staffimage.png"
                     />
                   </Box>
@@ -354,7 +358,7 @@ const Contant = () => {
                       width="150"
                       height="150"
                       roundedCircle
-                      src={`${posts?.base_url}${posts?.v5c_cert}`}
+                      src={`${base_urll}${posts?.v5c_cert}`}
                       alt="staffimage.png"
                     />
                   </Box>
@@ -366,7 +370,7 @@ const Contant = () => {
                       width="150"
                       height="150"
                       roundedCircle
-                      src={`${posts?.base_url}${posts?.dvia_cert}`}
+                      src={`${base_urll}${posts?.dvia_cert}`}
                       alt="staffimage.png"
                     />
                   </Box>
@@ -380,7 +384,7 @@ const Contant = () => {
                       width="150"
                       height="150"
                       roundedCircle
-                      src={`${posts?.base_url}${posts?.nationality_cert}`}
+                      src={`${base_urll}${posts?.nationality_cert}`}
                       alt="staffimage.png"
                     />
                   </Box>
